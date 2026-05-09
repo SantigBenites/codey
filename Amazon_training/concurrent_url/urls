@@ -1,0 +1,43 @@
+# Healthy public endpoints (fast 200s)
+https://www.google.com
+https://www.github.com
+https://www.cloudflare.com
+https://www.wikipedia.org
+
+# Returns specific status codes (httpbin is the standard for this)
+https://httpbin.org/status/200
+https://httpbin.org/status/301
+https://httpbin.org/status/404
+https://httpbin.org/status/500
+https://httpbin.org/status/503
+
+# Redirects — should your script follow them or report 301/302?
+https://httpbin.org/redirect/1
+https://httpbin.org/redirect/3
+
+# Slow response — server delays 10s before responding
+# Your timeout should catch this
+https://httpbin.org/delay/10
+
+# DNS failure — domain does not exist
+https://this-domain-definitely-does-not-exist-9f3a2b1c.invalid
+https://nonexistent-host-for-testing.example.invalid
+
+# Connection refused — valid host, port not listening
+http://127.0.0.1:1
+http://localhost:1
+
+# Connection refused on a host that almost certainly isn't serving HTTP on weird ports
+http://127.0.0.1:9999
+
+# Malformed / edge cases
+https://
+not-a-valid-url
+http://
+
+# Blank line above (whitespace handling)
+
+# Comment line that should be skipped if your parser handles them
+
+# Duplicate (should it be deduped or checked twice? design choice)
+https://www.google.com

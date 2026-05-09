@@ -1,0 +1,35 @@
+2026-05-08T08:00:00Z INFO Server starting up
+2026-05-08T08:15:32Z INFO Database connection established
+2026-05-08T09:02:11Z DEBUG Cache warmed with 1247 entries
+2026-05-08T09:45:03Z INFO User alice logged in
+2026-05-08T10:00:00Z WARN High memory usage: 87%
+2026-05-08T10:23:47Z INFO User bob logged in
+2026-05-08T10:59:59Z DEBUG Heartbeat ok
+2026-05-08T11:00:00Z INFO Scheduled job started: nightly-backup
+2026-05-08T11:00:01Z INFO Backup snapshot created
+2026-05-08T11:15:22Z ERROR Failed to reach upstream service auth-svc
+2026-05-08T11:15:23Z INFO Retrying connection to auth-svc
+2026-05-08T11:30:00Z INFO Connection to auth-svc restored
+2026-05-08T12:00:00Z INFO Midday health check passed
+2026-05-08T12:34:56Z DEBUG Request id=abc123 latency=42ms
+2026-05-08T13:11:08Z WARN Rate limit approaching for client 10.0.0.42
+2026-05-08T13:45:30Z INFO User charlie logged in
+2026-05-08T14:00:00Z INFO Hourly metrics flushed
+2026-05-08T14:23:11Z INFO Request processed
+2026-05-08T14:59:59Z DEBUG Heartbeat ok
+2026-05-08T15:00:00Z INFO Afternoon batch job started
+2026-05-08T15:42:18Z ERROR Disk write failed on /var/log/app.log
+2026-05-08T16:00:00Z INFO Recovery procedure initiated
+2026-05-08T16:30:45Z INFO Recovery completed successfully
+2026-05-08T17:00:00Z INFO User alice logged out
+2026-05-08T18:15:00Z INFO Evening maintenance window opened
+2026-05-08T19:00:00Z INFO Maintenance window closed
+2026-05-08T20:30:00Z INFO Low traffic period
+2026-05-08T22:00:00Z INFO Nightly cleanup started
+2026-05-08T23:59:59Z INFO End of day rollover
+2026-05-09T00:00:00Z INFO New day starting
+2026-05-09T00:15:30Z DEBUG Heartbeat ok
+2026-05-09T01:30:00Z INFO Quiet period
+2026-05-09T03:45:12Z WARN Slow query detected: 2300ms
+2026-05-09T06:00:00Z INFO Morning ramp-up beginning
+ 
