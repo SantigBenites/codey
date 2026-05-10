@@ -1,0 +1,47 @@
+username,email,group,action
+# --- Valid creates ---
+alice,alice@example.com,developers,create
+bob,bob@example.com,developers,create
+charlie,charlie@example.com,ops,create
+diana,diana@example.com,ops,create
+
+# --- Valid disables (assume these users exist already) ---
+ed,ed@example.com,developers,disable
+fiona,fiona@example.com,ops,disable
+
+# --- Valid deletes ---
+greg,greg@example.com,developers,delete
+hank,hank@example.com,ops,delete
+
+# --- Idempotency: re-create existing users (should be no-op or skip) ---
+alice,alice@example.com,developers,create
+bob,bob@example.com,developers,create
+
+# --- Invalid usernames (should be rejected, not crash the run) ---
+,empty@example.com,developers,create
+1startswithdigit,bad@example.com,developers,create
+has spaces,bad@example.com,developers,create
+has-CAPS,bad@example.com,developers,create
+verylongusernamethatexceedsthe32characterlimit,bad@example.com,developers,create
+weird!chars,bad@example.com,developers,create
+
+# --- Invalid email format ---
+ivan,not-an-email,developers,create
+juliet,missing@,developers,create
+
+# --- Invalid action ---
+kevin,kevin@example.com,developers,frobnicate
+lina,lina@example.com,developers,
+
+# --- Invalid group (assume only developers/ops/admin allowed) ---
+mike,mike@example.com,nonexistent_group,create
+
+# --- Edge case: trailing whitespace ---
+   nina   ,  nina@example.com  , developers , create
+
+# --- Conflicting actions on same user (process in order or detect?) ---
+oscar,oscar@example.com,developers,create
+oscar,oscar@example.com,developers,delete
+
+# --- All fields missing ---
+,,,

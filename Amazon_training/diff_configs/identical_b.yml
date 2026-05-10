@@ -1,0 +1,11 @@
+# A header comment that didn't exist in A
+# More commentary here
+
+
+logging:
+  level: INFO
+
+database:
+    port: 5432
+    host: localhost
+# trailing comment

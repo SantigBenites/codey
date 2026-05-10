@@ -1,0 +1,5 @@
+database:
+  host: localhost
+  port: 5432
+   bad_indent: oops          # mixed indentation - YAML parser will reject
+  unbalanced: [a, b, c
