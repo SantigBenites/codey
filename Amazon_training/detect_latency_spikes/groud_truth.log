@@ -1,0 +1,13 @@
+Expected anomalies (your script should report these):
+ENDPOINT          WINDOW START            COUNT     P95  BASELINE   MULT
+---------------------------------------------------------------------------
+/api/login        2026-05-10T11:20:00Z       19     639     110.5   5.78
+/api/checkout     2026-05-10T09:45:00Z       23     835     168.5   4.96
+/api/checkout     2026-05-10T09:47:00Z       36     822     168.5   4.88
+/api/checkout     2026-05-10T09:46:00Z       32     801     168.5   4.75
+/api/search       2026-05-10T10:30:00Z       59    1206     297.0   4.06
+/api/search       2026-05-10T10:31:00Z       65    1054     297.0   3.55
+
+Total log lines written: 41316 (including 4 malformed)
+Endpoints with computed baselines: {'/api/health': 6.0, '/api/search': 297.0, '/api/login': 110.5, '/api/checkout': 168.5, '/api/rare': 54}
+Note: /api/rare should NOT appear (low volume — fewer than 10 req/window).

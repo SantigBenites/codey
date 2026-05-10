@@ -1,0 +1,13 @@
+services:
+  database:
+    depends_on: []
+  cache:
+    depends_on: [database]
+  api:
+    depends_on: [database, cache]
+  worker:
+    depends_on: [database, cache]
+  frontend:
+    depends_on: [api]
+  notifier:
+    depends_on: [api, worker]
